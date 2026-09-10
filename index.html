@@ -155,14 +155,10 @@
                 <i class="fas fa-gift text-4xl sm:text-5xl"></i>
             </div>
             <h2 class="text-2xl sm:text-3xl font-bold mb-1 font-cursive glow-text text-pink-300">Ada Kejutan Istimewa!</h2>
-            <p class="text-gray-300 text-xs sm:text-sm mb-5">Masukkan namamu untuk membuka kejutan spesial hari ini ✨</p>
-            
-            <div class="mb-5 text-left">
-                <input type="text" id="introNameInput" placeholder="Ketik nama kamu di sini..." class="w-full px-4 py-3.5 rounded-2xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-400 text-sm text-center font-semibold transition">
-            </div>
+            <p class="text-gray-300 text-xs sm:text-sm mb-6">Klik tombol di bawah untuk membuka pesan spesial hari ini ✨</p>
 
             <button id="startExperienceBtn" class="w-full py-3.5 px-6 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 hover:from-pink-600 hover:to-indigo-600 rounded-2xl font-semibold text-base sm:text-lg shadow-xl shadow-pink-500/25 transform hover:-translate-y-0.5 transition duration-300 flex items-center justify-center gap-2">
-                 Buka Kejutan
+                <i class="fas fa-sparkles text-yellow-300"></i> Buka Halaman
             </button>
         </div>
     </div>
@@ -183,11 +179,11 @@
             </h1>
             
             <h2 id="recipientNameHeading" class="text-3xl sm:text-5xl font-bold font-handwriting text-yellow-300 glow-gold mb-6">
-                [Nama Teman]
+                Rubii
             </h2>
 
             <p class="text-base sm:text-lg text-gray-300 leading-relaxed max-w-xl font-light">
-                Semoga hari ini dipenuhi tawa, cinta, kehangatan, dan semua kebaikan di dunia menyertai setiap langkahmu ke depan! 🎉
+                Semoga hari ini dipenuhi tawa, hal-hal menyenangkan, dan semua kebaikan di dunia menyertai setiap langkahmu ke depan! 🎉
             </p>
 
             <div class="mt-8 flex flex-wrap gap-4 justify-center">
@@ -287,12 +283,12 @@
 
         <!-- SECTION 4: HEARTFELT LETTER SECTION -->
         <section id="letterSection" class="w-full max-w-3xl glass-card p-8 sm:p-12 rounded-3xl relative">
-            <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-pink-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center text-white text-xl shadow-lg">
-                <i class="fas fa-heart"></i>
+            <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-indigo-600 w-12 h-12 rounded-full flex items-center justify-center text-white text-lg shadow-lg">
+                <i class="fas fa-envelope-open-text"></i>
             </div>
 
             <div class="mt-4 text-center mb-6">
-                <h3 class="text-2xl sm:text-3xl font-bold font-cursive text-pink-300">Surat Tulus Untukmu</h3>
+                <h3 class="text-2xl sm:text-3xl font-bold font-cursive text-pink-300">Pesan & Harapan Terbaik ✉️</h3>
             </div>
 
             <div class="glass-card-bright p-6 sm:p-8 rounded-2xl shadow-inner font-sans leading-relaxed text-slate-800 text-base sm:text-lg min-h-[180px]">
@@ -300,8 +296,8 @@
             </div>
 
             <div class="mt-6 text-right">
-                <p class="font-handwriting text-2xl text-yellow-300 glow-gold" id="letterSender">Dengan Doa,</p>
-                <p class="text-sm text-gray-400" id="letterSenderSub">[Pengirim]</p>
+                <p class="font-handwriting text-2xl text-yellow-300 glow-gold" id="letterSender">Doa & Harapan Terbaik,</p>
+                <p class="text-sm text-gray-400" id="letterSenderSub">[Teman]</p>
             </div>
         </section>
 
@@ -329,7 +325,7 @@
 
     <!-- FOOTER -->
     <footer class="relative z-10 text-center py-8 text-xs text-gray-400 border-t border-white/10 mt-12">
-        <p>Dibuat khusus untuk merayakan hari paling spesial.</p>
+        <p>Dirancang khusus untuk merayakan momen spesialmu. ✨</p>
         <p class="mt-1 opacity-60">© <span id="currentYear"></span> Special Birthday Celebration</p>
     </footer>
 
@@ -355,6 +351,7 @@
                     </button>
                 </div>
             </form>
+            <p class="text-[11px] text-gray-400 mt-4">Password default: <span class="font-bold text-pink-600">1234</span> (Dapat diubah)</p>
         </div>
     </div>
 
@@ -404,20 +401,19 @@
     </div>
 
     <script>
-        // Default Content Data
         let appData = {
-            recipient: "Nama Spesial",
-            sender: "Dari Seseorang",
+            recipient: "Rubii",
+            sender: "Dari Seseorang Yang Ikut Mendoakan",
             message: "وَسَلَامٌ عَلَيْهِ يَوْمَ وُلِدَ وَيَوْمَ يَمُوتُ وَيَوْمَ يُبْعَثُ حَيًّا\n\n\"Dan kesejahteraan semoga dilimpahkan kepadanya pada hari ia dilahirkan, pada hari ia meninggal, dan pada hari ia dibangkitkan hidup kembali.\"\n(QS. Maryam: 15 / 33)\n\nSelamat Ulang Tahun! ✨\nSemoga di usiamu yang baru ini, Allah SWT senantiasa melimpahkan keberkahan, kesehatan, kedamaian, petunjuk, serta kebahagiaan yang tak pernah terputus dalam setiap langkah hidupmu.",
             balloonMessages: [
-                "Semoga sehat selalu dan panjang umur! ❤️",
+                "Semoga sehat selalu dan panjang umur! 🌟",
                 "Makin sukses dan tercapai segala cita-citamu! ✨",
-                "Tetap jadi pribadi yang baik dan menyenangkan! 🌟",
-                "Semoga harimu selalu dipenuhi rezeki melimpah! 💰",
+                "Tetap jadi pribadi yang asyik dan menginspirasi! 🚀",
+                "Semoga harimu selalu dipenuhi rezeki melimpah! 🍀",
                 "Bahagia selalu bersama orang-orang tersayang! 🥂",
-                "Selalu dalam lindungan dan kasih sayang Allah SWT! 🌸"
+                "Selalu dalam lindungan dan kebaikan setiap hari! 🌸"
             ],
-            adminPassword: "rvn123"
+            adminPassword: "1234"
         };
 
         // BGM Synthesizer (Happy Birthday Chiptune/Music Box with Web Audio API)
@@ -607,14 +603,8 @@
             document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Start Experience Button with Real-time Name Input
+        // Start Experience Button
         document.getElementById('startExperienceBtn').addEventListener('click', () => {
-            const inputName = document.getElementById('introNameInput').value.trim();
-            if (inputName !== '') {
-                appData.recipient = inputName;
-                renderUI();
-            }
-
             document.getElementById('introModal').classList.add('opacity-0', 'pointer-events-none');
             setTimeout(() => {
                 document.getElementById('introModal').style.display = 'none';
@@ -784,7 +774,7 @@
         function verifyPassword(e) {
             e.preventDefault();
             const input = document.getElementById('inputPassword').value;
-            const currentPass = appData.adminPassword || "rvn123";
+            const currentPass = appData.adminPassword || "1234";
 
             if (input === currentPass) {
                 closePasswordModal();
@@ -804,7 +794,7 @@
                 document.getElementById('editRecipient').value = appData.recipient;
                 document.getElementById('editSender').value = appData.sender;
                 document.getElementById('editMessage').value = appData.message;
-                document.getElementById('editPassword').value = appData.adminPassword || "rvn123";
+                document.getElementById('editPassword').value = appData.adminPassword || "1234";
                 modal.classList.remove('hidden');
             } else {
                 modal.classList.add('hidden');
